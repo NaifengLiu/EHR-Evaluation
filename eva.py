@@ -23,4 +23,11 @@ v_rank_final = v_rank[:, 0]
 t_rank = np.argsort(-t_result, axis=0)
 t_rank_final = t_rank[:, 0]
 
-print v_rank_final
+v_found = 0
+count = 0
+for i in v_rank_final:
+    if i <= 197:
+        v_found += 1
+    count += 1
+    if v_found / float(197) >= 0.05:
+        print "v_recall at 0.05: " + str(v_found / float(count))
