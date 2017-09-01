@@ -17,7 +17,7 @@ import os
 v_result = np.loadtxt("v_result")
 t_result = np.loadtxt("t_result")
 
-v_rank = np.argsort(v_result, axis=0)
+v_rank = np.argsort(-v_result, axis=0)
 v_rank_final = v_rank[:, 0]
 
 t_rank = np.argsort(-t_result, axis=0)
@@ -31,4 +31,14 @@ for i in v_rank_final:
     count += 1
     if v_found / float(197) >= 0.05:
         print "v_recall at 0.05: " + str(v_found / float(count) * 100) + "%"
+        break
+
+t_found = 0
+count = 0
+for i in t_rank_final:
+    if i <= 197:
+        t_found += 1
+    count += 1
+    if t_found / float(197) >= 0.05:
+        print "v_recall at 0.05: " + str(t_found / float(count) * 100) + "%"
         break
