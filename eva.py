@@ -17,7 +17,7 @@ import os
 v_result = np.loadtxt("v_result")
 t_result = np.loadtxt("t_result")
 
-v_rank = np.argsort(-v_result, axis=0)
+v_rank = np.argsort(v_result, axis=0)
 v_rank_final = v_rank[:, 0]
 
 t_rank = np.argsort(-t_result, axis=0)
