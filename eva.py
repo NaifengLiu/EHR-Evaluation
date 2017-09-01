@@ -25,14 +25,15 @@ t_rank_final = t_rank[:, 0]
 
 v_found = 0
 count = 0
+f_005 = 0
+f_010 = 0
+f_015 = 0
+f_020 = 0
 for i in v_rank_final:
     if i <= 197:
         v_found += 1
     count += 1
-    f_005 = 0
-    f_010 = 0
-    f_015 = 0
-    f_020 = 0
+
     if 0.05 <= v_found / float(197) <= 0.10 and f_005 == 0:
         print "v_recall at 0.05: " + str(v_found / float(count) * 100) + "%"
         f_005 += 1
