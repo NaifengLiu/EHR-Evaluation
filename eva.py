@@ -29,8 +29,14 @@ for i in v_rank_final:
     if i <= 197:
         v_found += 1
     count += 1
-    if v_found / float(197) >= 0.05:
+    if 0.05 <= v_found / float(197) <= 0.10:
         print "v_recall at 0.05: " + str(v_found / float(count) * 100) + "%"
+    elif 0.10 <= v_found / float(197) <= 0.15:
+        print "v_recall at 0.10: " + str(v_found / float(count) * 100) + "%"
+    elif 0.15 <= v_found / float(197) <= 0.20:
+        print "v_recall at 0.15: " + str(v_found / float(count) * 100) + "%"
+    elif 0.20 <= v_found / float(197) <= 0.25:
+        print "v_recall at 0.20: " + str(v_found / float(count) * 100) + "%"
         break
 
 t_found = 0
@@ -40,5 +46,5 @@ for i in t_rank_final:
         t_found += 1
     count += 1
     if t_found / float(197) >= 0.05:
-        print "v_recall at 0.05: " + str(t_found / float(count) * 100) + "%"
+        print "t_recall at 0.05: " + str(t_found / float(count) * 100) + "%"
         break
