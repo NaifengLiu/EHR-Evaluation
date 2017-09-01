@@ -1,7 +1,7 @@
 import numpy as np
 import os
 
-v = np.zeros([49801, 2])
+v = np.zeros([39597, 2])
 t = np.zeros([49801, 2])
 
 
