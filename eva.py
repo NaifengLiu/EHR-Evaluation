@@ -31,3 +31,4 @@ for i in v_rank_final:
     count += 1
     if v_found / float(197) >= 0.05:
         print "v_recall at 0.05: " + str(v_found / float(count) * 100) + "%"
+        break
