@@ -32,8 +32,8 @@ for i in v_rank_final:
     count += 1
     ratio = v_found / float(197)
     if 1 <= int(ratio/0.05) <= 10:
-        if result[int(ratio/0.05)] == 0:
-            result[int(ratio/0.05)] = v_found / float(count) * 100
+        if result[int(ratio/0.05)-1] == 0:
+            result[int(ratio/0.05)-1] = v_found / float(count) * 100
 
 t_found = 0
 count = 0
